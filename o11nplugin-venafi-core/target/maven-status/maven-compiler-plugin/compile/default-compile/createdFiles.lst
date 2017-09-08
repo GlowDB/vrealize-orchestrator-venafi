@@ -1,0 +1,5 @@
+us/nsfv/venafi/VenafiTPMPluginFactory.class
+us/nsfv/venafi/VenafiTPMModuleBuilder.class
+us/nsfv/venafi/VenafiTPMPluginAdaptor.class
+us/nsfv/venafi/model/X509Certificate.class
+us/nsfv/venafi/model/Host.class

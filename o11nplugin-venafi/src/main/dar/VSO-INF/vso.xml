@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<module name="VenafiTPM" version="${project.version}" build-number="${build.number}" image="images/venafi.png">
+    <description>Venafi TPM plug-in for vRealize Orchestrator</description>
+    <installation mode="${installation.mode}">
+        <action resource="packages/${project.artifactId}-package-${project.version}.package" type="install-package"/>
+    </installation>
+    <finder-datasources>
+        <finder-datasource name="main-datasource" adaptor-class="us.nsfv.venafi.VenafiTPMPluginAdaptor" concurrent-call="false" anonymous-login-mode="internal"/>
+    </finder-datasources>
+    <scripting-objects>
+        <object script-name="VenafiTPMHost" java-class="us.nsfv.venafi.model.Host" strict="false" is-deprecated="false">
+            <description>Defines a connection to a Venafi TPM Server and its related properties.</description>
+            <constructors/>
+            <attributes>
+                <attribute script-name="name" java-name="name" return-type="String" read-only="false" show-in-api="true">Display name of the Venafi connection</attribute>
+                <attribute script-name="id" java-name="id" return-type="String" read-only="false" show-in-api="true">Internal ID of the Venafi connection</attribute>
+                <attribute script-name="port" java-name="port" return-type="int" read-only="false" show-in-api="true">Service port used to connect to the Venafi server</attribute>
+                <attribute script-name="hostName" java-name="hostName" return-type="String" read-only="false" show-in-api="true">Host name/FQDN of the Venafi server</attribute>
+                <attribute script-name="password" java-name="password" return-type="String" read-only="false" show-in-api="true">Password for Venafi server connectionn</attribute>
+                <attribute script-name="userName" java-name="userName" return-type="String" read-only="false" show-in-api="true">Username for Venafi server connection</attribute>
+            </attributes>
+            <methods>
+                <method script-name="reload" java-name="reload" return-type="void" show-in-api="true" is-deprecated="false">
+                    <description>Reloads the Venafi Host connection object.</description>
+                </method>
+            </methods>
+        </object>
+        <object script-name="VenafiTPMX509Certificate" java-class="us.nsfv.venafi.model.X509Certificate" strict="false" is-deprecated="false">
+            <description>Represents a X509 Certificate object in Venafi.</description>
+            <constructors/>
+            <attributes>
+                <attribute script-name="certificateDn" java-name="certificateDn" return-type="String" read-only="false" show-in-api="true">The Certificate DN (path) in Venafi.</attribute>
+                <attribute script-name="thumbprint" java-name="thumbprint" return-type="String" read-only="false" show-in-api="true">SSL Thumbprint of the X509 Certificate.</attribute>
+                <attribute script-name="venafiUniqueId" java-name="venafiUniqueId" return-type="String" read-only="false" show-in-api="true">Unique internal ID for Venafi Object, type agnostic.</attribute>
+            </attributes>
+        </object>
+    </scripting-objects>
+</module>

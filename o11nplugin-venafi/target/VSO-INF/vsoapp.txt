@@ -1,0 +1,1 @@
+THE VENAFI LICENSE FILE LIVES IN /o11n-venafi/src/main/VSO-INF/vsoapp.txt
