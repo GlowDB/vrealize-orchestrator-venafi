@@ -44,11 +44,13 @@ public class Host {
     // use spring restTemplate to do a GET
     @VsoMethod(description="Using Spring Framework REST Client to get XKCD data.")
     public String getXKCDComic() {
-        // disable SSL verification
+        // disable SSL verification (see /helpers folder)
         SSLCertificateValidation.disable();
-        // construct REST call
+        // construct REST Template from the Spring framework
         RestTemplate restTemplate = new RestTemplate();
+        // execute the GET to URL, second arg is the type to expect in return aka string
         String data = restTemplate.getForObject("https://xkcd.com/info.0.json", String.class);
+        // output the dataz
         return data.toString();
     }
     
