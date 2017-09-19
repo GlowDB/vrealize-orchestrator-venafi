@@ -1,5 +1,13 @@
+SSLCertificateValidation$NullX509TrustManager.class
+SSLCertificateValidation.class
 us/nsfv/venafi/VenafiTPMPluginFactory.class
 us/nsfv/venafi/VenafiTPMModuleBuilder.class
+SSLCertificateValidation$1.class
+us/nsfv/venafi/model/SSLCertificateValidation$NullHostnameVerifier.class
 us/nsfv/venafi/VenafiTPMPluginAdaptor.class
+us/nsfv/venafi/model/SSLCertificateValidation.class
+us/nsfv/venafi/model/SSLCertificateValidation$1.class
 us/nsfv/venafi/model/X509Certificate.class
+SSLCertificateValidation$NullHostnameVerifier.class
 us/nsfv/venafi/model/Host.class
+us/nsfv/venafi/model/SSLCertificateValidation$NullX509TrustManager.class

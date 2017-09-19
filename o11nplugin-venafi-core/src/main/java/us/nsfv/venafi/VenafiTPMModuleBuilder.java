@@ -11,7 +11,7 @@ public final class VenafiTPMModuleBuilder extends ModuleBuilder {
 
     @Override
     public void configure() {
-        module("VenafiTPM").withDescription(DESCRIPTION).withImage("images/venafi.png")
+        module("VenafiTPM").withDescription(DESCRIPTION).withImage("images/default-32x32.png")
                 .basePackages(VenafiTPMModuleBuilder.class.getPackage().getName()).version(
                 "${project.version}");
 
